@@ -1,0 +1,12 @@
+md-card {
+  margin: 8px;
+  border-radius: 8px;
+}
+
+.example-form {
+  width: 500px;
+}
+
+.example-full-width {
+  width: 100%;
+}

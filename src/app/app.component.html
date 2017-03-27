@@ -1,3 +1,26 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar color="primary">
+  <span><a routerLink="">{{ title }}</a></span>
+  <span class="spacer"></span>
+  <md-list>
+    <md-list-item>
+      <img md-list-avatar src="{{ (af.auth | async)?.auth.photoURL }}" height="36" width="36">
+      <h4 md-line>{{ (af.auth | async)?.auth.displayName }}</h4>
+      <p md-line>{{ (af.auth | async)?.auth.email }}</p>
+    </md-list-item>
+  </md-list>
+
+  <button (click)="login()" md-button *ngIf="(af.auth | async)?.auth == null">INGRESAR</button>
+
+  <button md-icon-button [mdMenuTriggerFor]="menu">
+    <md-icon>more_vert</md-icon>
+  </button>
+  <md-menu #menu="mdMenu">
+    <button md-menu-item (click)="logout()">
+      <md-icon>exit_to_app</md-icon>
+      <span>Salir</span>
+    </button>
+  </md-menu>
+</md-toolbar>
+<!--<main>-->
+  <router-outlet></router-outlet>
+<!--</main>-->

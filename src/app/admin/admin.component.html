@@ -1,0 +1,31 @@
+<div class="container">
+
+  <md-card>
+    <md-card-title>Article</md-card-title>
+
+    <form (ngSubmit)="onSubmit()">
+      <md-input-container>
+        <input mdInput placeholder="Título" [(ngModel)]="article.title" name="title">
+      </md-input-container>
+
+      <md-input-container>
+        <input mdInput placeholder="Link" [(ngModel)]="article.link" name="link">
+      </md-input-container>
+
+      <p>
+        <md-input-container class="example-full-width">
+          <textarea mdInput placeholder="Body" rows="20" [(ngModel)]="article.body" name="body"></textarea>
+        </md-input-container>
+      </p>
+
+      <md-select placeholder="Tags" id="mainTag" required [(ngModel)]="article.mainTag" name="mainTag">
+        <md-option *ngFor="let tag of tags" [value]="tag.id">{{tag.name}}</md-option>
+      </md-select>
+
+      <button type="submit" md-raised-button>Save</button>
+    </form>
+
+    {{article | json}}
+
+  </md-card>
+</div>
