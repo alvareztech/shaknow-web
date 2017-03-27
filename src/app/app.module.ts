@@ -16,6 +16,7 @@ import { AdminComponent } from './admin/admin.component';
 import { ArticleComponent } from './article/article.component';
 import {TypesService} from './services/types.service';
 import {FIREBASE_CONFIG} from './keys';
+import {AppRoutingModule} from 'app/app-routing.module';
 
 
 const firebaseAuthConfig = {
@@ -23,20 +24,7 @@ const firebaseAuthConfig = {
   method: AuthMethods.Redirect
 };
 
-const appRoutes: Routes = [
-  {
-    path: '',
-    component: ArticlesComponent
-  },
-  {
-    path: 'admin',
-    component: AdminComponent
-  },
-  {
-    path: ':id',
-    component: ArticleComponent
-  }
-];
+
 
 
 @NgModule({
@@ -53,7 +41,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     MaterialModule,
     AngularFireModule.initializeApp(FIREBASE_CONFIG, firebaseAuthConfig),
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule
   ],
   providers: [TypesService],
   bootstrap: [AppComponent]
