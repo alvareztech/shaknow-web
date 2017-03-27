@@ -12,7 +12,7 @@ import {AngularFire, FirebaseObjectObservable} from 'angularfire2';
 export class AdminComponent implements OnInit {
 
   tags: Tag[];
-  article = new Article('Hola', 'Hola2', 'android', 'android-google');
+  article = new Article('', '', '', '');
 
   constructor(private typesService: TypesService, private af: AngularFire) {
     this.tags = typesService.getTags();
@@ -22,12 +22,8 @@ export class AdminComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('onSubmit...');
-    const articles = this.af.database.list('articles');
-    articles.push(this.article);
+    console.log('onSubmit...' + this.article.link);
+    const article = this.af.database.list('articles');
+    article.update(this.article.link, this.article);
   }
-
-  // get diagnostic() {
-  //   return JSON.stringify(this.article);
-  // }
 }
