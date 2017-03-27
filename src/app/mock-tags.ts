@@ -5,4 +5,5 @@ export const TAGS: Tag[] = [
   {id: 'ios', name: 'iOS'},
   {id: 'angular', name: 'Angular'},
   {id: 'firebase', name: 'Firebase'},
+  {id: 'java', name: 'Java'},
 ];
