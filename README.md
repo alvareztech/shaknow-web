@@ -28,3 +28,26 @@ This information is in the [Firebase Console](https://console.firebase.google.co
 
 * [Angular Material](https://material.angular.io/)
 * [Angular Fire 2](https://github.com/angular/angularfire2)
+
+## Database structure
+
+Building the structure...
+
+```json
+{
+  "articles": {
+    "demo_article": {
+      "title": "An article",
+      "body": "A body",
+      "published": true,
+      "mainTag": "firebase"
+    }
+  },
+  "users": {
+    "user1": {
+      "name": "Daniel Alvarez",
+      "email": "daniel@alvarez.tech"
+    }
+  }
+}
+```
