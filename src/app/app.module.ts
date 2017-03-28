@@ -11,12 +11,13 @@ import {AngularFireModule, AuthMethods, AuthProviders} from 'angularfire2';
 import {AppComponent} from './app.component';
 import 'hammerjs';
 import {ArticlesComponent} from './articles/articles.component';
-import {Routes, RouterModule} from '@angular/router';
-import { AdminComponent } from './admin/admin.component';
-import { ArticleComponent } from './article/article.component';
+import {AdminComponent} from './admin/admin.component';
+import {ArticleComponent} from './article/article.component';
 import {TypesService} from './services/types.service';
 import {FIREBASE_CONFIG} from './keys';
 import {AppRoutingModule} from 'app/app-routing.module';
+
+import {MarkdownToHtmlPipe} from 'markdown-to-html-pipe';
 
 
 const firebaseAuthConfig = {
@@ -24,15 +25,13 @@ const firebaseAuthConfig = {
   method: AuthMethods.Redirect
 };
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
     ArticlesComponent,
     AdminComponent,
-    ArticleComponent
+    ArticleComponent,
+    MarkdownToHtmlPipe
   ],
   imports: [
     BrowserModule,

@@ -28,6 +28,7 @@ This information is in the [Firebase Console](https://console.firebase.google.co
 
 * [Angular Material](https://material.angular.io/)
 * [Angular Fire 2](https://github.com/angular/angularfire2)
+* [Angular Flex Layout](https://github.com/angular/flex-layout)
 
 ## Database structure
 

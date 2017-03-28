@@ -2,8 +2,7 @@
   <md-card-title>{{ (article | async)?.title }}</md-card-title>
 
   <md-card-content>
-    <p>
-      {{ (article | async)?.body }}
-    </p>
+    <div [innerHtml]="(article | async)?.body | MarkdownToHtml">
+    </div>
   </md-card-content>
 </md-card>
