@@ -19,6 +19,8 @@ import {AppRoutingModule} from 'app/app-routing.module';
 
 import {MarkdownToHtmlPipe} from 'markdown-to-html-pipe';
 
+import {FlexLayoutModule} from '@angular/flex-layout';
+
 
 const firebaseAuthConfig = {
   provider: AuthProviders.Google,
@@ -40,7 +42,8 @@ const firebaseAuthConfig = {
     BrowserAnimationsModule,
     MaterialModule,
     AngularFireModule.initializeApp(FIREBASE_CONFIG, firebaseAuthConfig),
-    AppRoutingModule
+    AppRoutingModule,
+    FlexLayoutModule
   ],
   providers: [TypesService],
   bootstrap: [AppComponent]

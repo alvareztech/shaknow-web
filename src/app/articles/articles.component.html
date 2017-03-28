@@ -1,6 +1,7 @@
-<md-grid-list cols="3">
-  <md-grid-tile *ngFor="let item of articles | async">
-    <md-card class="article" [routerLink]="[item.link]">
+<div fxLayout="column"
+     fxLayoutAlign="space-around stretch">
+
+    <md-card class="article" [routerLink]="[item.link]" *ngFor="let item of articles | async">
       <md-card-title>{{item.title}}</md-card-title>
       <md-card-subtitle>{{item.mainTag}}</md-card-subtitle>
       <img md-card-image src="assets/img/logos/android.svg">
@@ -8,5 +9,5 @@
         <!--{{item.body}}-->
       </md-card-content>
     </md-card>
-  </md-grid-tile>
-</md-grid-list>
+
+</div>
