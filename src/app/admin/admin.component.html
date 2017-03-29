@@ -1,29 +1,25 @@
-<div class="container">
-
-  <md-card>
-    <md-card-title>Article</md-card-title>
-
-    <form (ngSubmit)="onSubmit()">
-      <md-input-container>
-        <input mdInput placeholder="Título" [(ngModel)]="article.title" name="title">
-      </md-input-container>
-
-      <md-input-container>
-        <input mdInput placeholder="Link" [(ngModel)]="article.link" name="link">
-      </md-input-container>
-
-      <p>
-        <md-input-container class="example-full-width">
-          <textarea mdInput placeholder="Body" rows="20" [(ngModel)]="article.body" name="body"></textarea>
-        </md-input-container>
-      </p>
-
-      <md-select placeholder="Tags" id="mainTag" required [(ngModel)]="article.mainTag" name="mainTag">
-        <md-option *ngFor="let tag of tags" [value]="tag.id">{{tag.name}}</md-option>
-      </md-select>
-
-      <button type="submit" md-raised-button>Save</button>
-    </form>
-
-  </md-card>
-</div>
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="formGroupExampleInput">Título</label>
+    <input placeholder="Título" [(ngModel)]="article.title" name="title" type="text" id="formGroupExampleInput"
+           class="form-control">
+  </div>
+  <div class="form-group">
+    <input placeholder="Link" [(ngModel)]="article.link" name="link" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="bodyInput">Cuerpo</label>
+    <textarea placeholder="Body" rows="20" [(ngModel)]="article.body" name="body" id="bodyInput"
+              class="form-control"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="mainTagInput">Main tag</label>
+    <select placeholder="Tags" id="mainTagInput" required [(ngModel)]="article.mainTag" name="mainTag"
+            class="form-control">
+      <option *ngFor="let tag of tags" [value]="tag.id">{{tag.name}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Save</button>
+  </div>
+</form>

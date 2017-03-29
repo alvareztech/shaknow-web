@@ -1,8 +1,5 @@
-<md-card>
-  <md-card-title>{{ (article | async)?.title }}</md-card-title>
-
-  <md-card-content>
-    <div [innerHtml]="(article | async)?.body | MarkdownToHtml">
-    </div>
-  </md-card-content>
-</md-card>
+<div>
+  <h1>{{ (article | async)?.title }}</h1>
+  <div [innerHtml]="(article | async)?.body | MarkdownToHtml">
+  </div>
+</div>

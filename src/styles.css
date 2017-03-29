@@ -1,11 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
+/* Show it is fixed to the top */
 body {
-  background-color: #f0f0f0;
-  font-family: 'PT Mono', monospace;
+  min-height: 75rem;
+  padding-top: 4.5rem;
 }

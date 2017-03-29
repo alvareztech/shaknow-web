@@ -1,13 +1,13 @@
-<div fxLayout="column"
-     fxLayoutAlign="space-around stretch">
+<div class="row">
+  <div class="col-lg-4" *ngFor="let item of articles | async">
 
-    <md-card class="article" [routerLink]="[item.link]" *ngFor="let item of articles | async">
-      <md-card-title>{{item.title}}</md-card-title>
-      <md-card-subtitle>{{item.mainTag}}</md-card-subtitle>
-      <img md-card-image src="assets/img/logos/android.svg">
-      <md-card-content>
-        <!--{{item.body}}-->
-      </md-card-content>
-    </md-card>
+    <div class="card" [routerLink]="[item.link]">
+      <img class="card-img-top" src="assets/img/logos/android.svg">
+      <div class="card-block">
+        <h4 class="card-title">{{item.title}}</h4>
+        <p class="card-text">{{item.mainTag}}</p>
+      </div>
+    </div>
+  </div>
 
 </div>

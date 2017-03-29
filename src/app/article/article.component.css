@@ -1,4 +1,4 @@
-md-card {
-  margin: 8px;
-  border-radius: 8px;
+:host >>> p {
+  font-family: 'Merriweather', serif;
+  /*font-size: 1.1rem;*/
 }
