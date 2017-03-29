@@ -16,13 +16,12 @@
 
     <img src="{{ (af.auth | async)?.auth.photoURL }}" height="36" width="36" class="rounded-circle">
     <span>{{ (af.auth | async)?.auth.displayName }}</span>
-    <span>{{ (af.auth | async)?.auth.email }}</span>
 
-    <button (click)="login()" *ngIf="(af.auth | async)?.auth == null">
+    <button class="btn btn-primary" (click)="login()" *ngIf="(af.auth | async)?.auth == null">
       Ingresar
     </button>
 
-    <button (click)="logout()">
+    <button class="btn btn-secondary" (click)="logout()">
       <span>Salir</span>
     </button>
   </div>
