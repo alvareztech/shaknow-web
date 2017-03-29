@@ -26,12 +26,12 @@ This information is in the [Firebase Console](https://console.firebase.google.co
 
 ## What does this experiment use?
 
-* [Angular Material](https://material.angular.io/)
+* [Angular Fire 2](https://github.com/angular/angularfire2)
 * [ng-bootstrap](https://github.com/ng-bootstrap/ng-bootstrap)
 
 ### We no longer use this
 
-* [Angular Fire 2](https://github.com/angular/angularfire2)
+* [Angular Material](https://material.angular.io/)
 * [Angular Flex Layout](https://github.com/angular/flex-layout)
 
 ## Database structure
