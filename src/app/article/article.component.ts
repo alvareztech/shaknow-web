@@ -27,13 +27,13 @@ export class ArticleComponent implements OnInit {
       this.article.subscribe(xyz => {
         console.log('se termino de cargar: ' + xyz.title);
         this.titleService.setTitle(xyz.title);
-        this.metaService.addTag({name: 'author', content: 'Daniel Alvarez'});
-        this.metaService.addTag({name: 'og:title', content: xyz.title});
-        this.metaService.addTag({name: 'og:description', content: xyz.desc});
-        this.metaService.addTag({name: 'og:url', content: 'http://alvarez.tech'});
-        this.metaService.addTag({name: 'og:image', content: 'assets/img/logos/android.svg'});
-        this.metaService.addTag({name: 'twitter:title', content: xyz.title});
-        this.metaService.addTag({name: 'twitter:description', content: xyz.desc});
+        this.metaService.updateTag({name: 'author', content: 'Daniel Alvarez'});
+        this.metaService.updateTag({name: 'og:title', content: xyz.title});
+        this.metaService.updateTag({name: 'og:description', content: xyz.desc});
+        this.metaService.updateTag({name: 'og:url', content: 'http://alvarez.tech'});
+        this.metaService.updateTag({name: 'og:image', content: 'assets/img/logos/android.svg'});
+        this.metaService.updateTag({name: 'twitter:title', content: xyz.title});
+        this.metaService.updateTag({name: 'twitter:description', content: xyz.desc});
       });
     });
 
