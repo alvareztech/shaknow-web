@@ -12,7 +12,7 @@ import {AngularFire, FirebaseObjectObservable} from 'angularfire2';
 export class AdminComponent implements OnInit {
 
   tags: Tag[];
-  article = new Article('', '', '', '');
+  article = new Article('', '', '', '', '');
 
   constructor(private typesService: TypesService, private af: AngularFire) {
     this.tags = typesService.getTags();

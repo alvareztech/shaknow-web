@@ -19,7 +19,6 @@ import {MarkdownToHtmlModule} from 'markdown-to-html-pipe';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
-
 const firebaseAuthConfig = {
   provider: AuthProviders.Google,
   method: AuthMethods.Redirect
